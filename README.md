@@ -1,6 +1,6 @@
 # Bug Triage Desk
 
-**Flip the Switch Hackathon** — Best Business Workflow Track
+**Flip the Switch Hackathon** 
 
 An AI-powered bug triage workflow where AI agents and humans collaborate through Switch to triage, fix, and ship bug fixes — with human-in-the-loop approval.
 
