@@ -1,0 +1,13 @@
+{
+  "name": "bug-triage-demo",
+  "version": "1.0.0",
+  "description": "A simple to-do web app with planted bugs for the Flip the Switch hackathon Bug Triage Desk demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
