@@ -42,12 +42,10 @@ app.put('/api/tasks/:id', (req, res) => {
 });
 
 // DELETE task
-// BUG #1: The delete endpoint uses the wrong variable name, so it never actually removes the task
 app.delete('/api/tasks/:id', (req, res) => {
   const taskIndex = tasks.findIndex(t => t.id === parseInt(req.params.id));
   if (taskIndex === -1) return res.status(404).json({ error: 'Task not found' });
-  // BUG: uses 'index' instead of 'taskIndex' — silently fails, task stays in the array
-  tasks.splice(index, 1);
+  tasks.splice(taskIndex, 1);
   res.json({ message: 'Task deleted' });
 });
 
