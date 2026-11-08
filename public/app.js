@@ -21,12 +21,9 @@ async function loadTasks() {
   });
 }
 
-// BUG #2: Date formatting is broken — shows raw ISO string instead of a friendly format
 function formatDate(dateStr) {
   if (!dateStr) return 'No due date';
-  // BUG: toLocaleDateString is called on the raw string, not a Date object
-  // This returns the raw string unchanged instead of formatting it
-  return dateStr.toLocaleDateString('en-US', {
+  return new Date(dateStr).toLocaleDateString('en-US', {
     weekday: 'short', year: 'numeric', month: 'short', day: 'numeric'
   });
 }
